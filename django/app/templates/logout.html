@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="/static/styleing.css">
+{% endblock %}
+{% block contant %}
+<body>
+    <h1>Logout</h1>
+    <form method="post">
+        {% csrf_token %}
+        
+        <button type="submit">comform</button>
+    </form>
+</body>
+{% endblock contant %}

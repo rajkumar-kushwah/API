@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="/static/styleing.css">
+{% endblock %}
+
+{% block contant %}
+
+<body>
+  <h1 class="home-bottom" >my first djago project</h1>
+  
+  <div class=" form-row-img">
+  {% for post in object %}
+  <div class="post-mb" >
+ <img class="action-img" src="{{post.image.url}}" alt="{{post.image.url}}"/>
+     <h2>{{post.name}}</h2>
+     <p>{{post.description}}</p>
+     <a class="btn-mb" href="{% url 'edit' post.id %}">Edit</a>
+     <a class="btn-mb" href="{% url 'delete' post.id %}">Delete</a>
+  </div>
+  {% endfor %}
+  </div>
+  
+  </body>
+
+
+{% endblock contant %}
+

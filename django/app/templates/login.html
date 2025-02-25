@@ -1,0 +1,38 @@
+ {% extends "base.html" %}
+ 
+ {% block css %}
+ {% load static %}
+ <link rel="stylesheet" href="/static/styleing.css">
+ {% endblock %}
+
+{% block contant %}
+
+<body>
+    <h1>Login</h1>
+    <h1>
+        {% if user.is_authenticated %}
+        {{ user.username }}
+        <button> 
+            <a href="{% url 'logout' %}">Logout</a>
+           </button>
+           {% else %}
+       <button>  
+           <a href="{% url 'login' %}">Login</a>
+       </button>
+       {% endif %}
+       </h1>
+    <form class="login-form" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</body>
+
+{% endblock  %}

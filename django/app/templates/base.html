@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block css %}
+    <link rel="stylesheet" href="/static/styleing.css">
+    {% endblock %}
+</head>
+<body>
+
+{% block navbar %}
+
+<div class="nav-sidebar">
+    <div class="nav-top">
+    {% csrf_token %}
+    <a href="/Home" class="href">Home</a>
+    <a href="/create" class="href">Create</a>
+    <a href="/register" class="href">Register</a>
+    <a href="/student" class="href">student</a>
+    {% if user.is_authenticated %}
+        <a href="/logout" class="logout">logout</a>
+    {% else %}
+        <a href="/login" class="logout href">Login</a>
+    {% endif %}
+    
+    
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block contant %}
+
+{% endblock contant %}
+
+</body>
+
+</html>
