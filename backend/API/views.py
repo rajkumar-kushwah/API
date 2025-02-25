@@ -29,7 +29,7 @@ class api_view(APIView):
             else:
               serializers = PostSerializer(post)
               return Response(serializers.data, status=status.HTTP_200_OK)
-        # serializers = PostSerializer(post ,data=request.data)
+        
         
         post=Post.objects.all()
         serializers = PostSerializer(post, many=True)
