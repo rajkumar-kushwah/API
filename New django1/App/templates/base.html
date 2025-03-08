@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="/static/new.css">
+    {% endblock css %}
+</head>
+<body>
+    <div class="navbar-m">
+    {% block navbar %}
+   
+    <div class="nav-m1"> 
+        <h1></span>LOGO</span></h1>
+
+    <a href="/home" class="href">Home</a>
+    <a href="/create" class="href">create</a>
+    </div>
+    {% endblock %}
+</div>
+{% block contant %}
+
+{% endblock contant %}
+</body>
+</html>

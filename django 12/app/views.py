@@ -69,7 +69,7 @@ def adit( req, post):
         post.save()
         messages.success(req, 'Post updated successfully!')
         return redirect('home')
-    return render(req, 'Home.html', {'post': post})
+    return render(req, 'create.html', {'post': post})
 
 def delete_post(req, post):
     post = get_object_or_404(Post, id=post)

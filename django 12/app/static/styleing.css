@@ -3,15 +3,15 @@
     padding: 0;
 }
 .form-data{
-  margin-top: 120px;
-    /* padding: 20px;
+  
+    padding: 20px;
     padding-left: 50px;
     border: 1px solid blue;
     border-radius: 5px;
      background-color: #f8f9fa;
      box-shadow: 0 10px,
      0 10px;
-     width: 40%; */
+     width: 40%;
    
 
  }
@@ -24,15 +24,15 @@
  }
  
  .register-form{
-     padding: 120px;
-     /* padding-left: 50px;
+     padding: 110px;
+     padding-left: 50px;
      border: 1px solid #007bff;
      border-radius: 5px;
      background-color: #f8f9fa;
      box-shadow: 0  10px,
       0 10px;
      width: 40%;
-     margin: 50px; */
+     margin: 50px;
  }
  .name-register{
      margin-top: 80px;

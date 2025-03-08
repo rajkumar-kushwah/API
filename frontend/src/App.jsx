@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import Form from './components/form'
+// import Form from './components/form'
 import Posts from './components/Posts'
 import Forma from './components/Froma'
 import { BrowserRouter ,Link, Routes,Route} from "react-router-dom"

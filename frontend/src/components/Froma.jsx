@@ -70,7 +70,7 @@ const Form=()=>{
 
     return(
       <div>
-      <h1 className=" text-center"> this is my form </h1>
+      <h3 className=" text-center"> this is my form </h3>
       <form onSubmit={handleSubmit} >
         <div className=" bg-amber-200  ">
           

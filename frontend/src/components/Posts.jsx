@@ -26,14 +26,17 @@ const Posts = () => {
     
   return (
     <div>
-        <h3 className='text-xl text-center font-bold'>welcome to the blog</h3>
-        <p><Link to={'create/'}><button className='bg-blue-500 text-white p-2 rounded-lg m-2'>Create Post</button></Link></p>
+      <div className='flex gray-200 p-2 m-2 w-500 bg-amber-700 fixed '>
+        <h1 className=''>LOGO</h1>
+        <p><Link to={'create/'}><button className='bg-blue-500 text-white p-2 rounded-lg '>Create Post</button></Link></p>
+        <h3 className='ml-32 ' >welcome to the blog</h3>
+        </div>
        <div className='flex flex-wrap'>
     {Count.map((value, index) => {
       
         return (
           
-            <div className='  gray-200 p-2 m-2 w-50 bg-amber-100   ' key={index} >
+            <div className='  gray-200 p-2 m-2 w-50 bg-amber-100  mt-25 ' key={index} >
               <img className='' src={`http://127.0.0.1:8000/${value.image}`} />
                 <h1 className='text-xl font-bold'>{value.title}</h1>
                 <p>{value.description}</p>
