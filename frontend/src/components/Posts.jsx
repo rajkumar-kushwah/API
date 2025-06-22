@@ -25,24 +25,33 @@ const Posts = () => {
 
     
   return (
-    <div>
-      <div className='flex gray-200 p-2 m-2 w-500 bg-amber-700 fixed '>
-        <h1 className=''>LOGO</h1>
-        <p><Link to={'create/'}><button className='bg-blue-500 text-white p-2 rounded-lg '>Create Post</button></Link></p>
-        <h3 className='ml-32 ' >welcome to the blog</h3>
-        </div>
-       <div className='flex flex-wrap'>
+    <div >
+      <header className="bg-orange-300 shadow-md p-4 h-20 flex items-center justify-between fixed top-0 left-0 right-0 w-full z-10"> 
+        
+          <div><Link to="/" className="text-3xl font-bold text-white">LOGO</Link></div>
+          <div className='text-2xl font-semibold text-white'>
+            welcome too tha blog
+          </div>
+           <Link to="create/">
+    <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Create Post</button>
+  </Link>
+        
+      </header>
+      
+       <div className='flex flex-wrap justify-center gap-4 p-4 mt-18 '>
     {Count.map((value, index) => {
       
         return (
           
-            <div className='  gray-200 p-2 m-2 w-50 bg-amber-100  mt-25 ' key={index} >
-              <img className='' src={`http://127.0.0.1:8000/${value.image}`} />
-                <h1 className='text-xl font-bold'>{value.title}</h1>
-                <p>{value.description}</p>
-                <Link to={`create/${value.id}/`}><button className='bg-blue-500 text-white p-2 rounded-lg m-2' >Edit</button></Link>
-                <button className='bg-red-500 text-white p-2 rounded-lg m-2' onClick={()=>{handleDelete(value.id)}}  >Delete</button>
+            <div key={index} className=' bg-amber-100 rounded-2xl shadow-lg p-4 w-full  sm:w-80' >
+              <img className='rounded-t-xl object-cover w-full h-48' src={`http://127.0.0.1:8000/${value.image}`} />
+                <h1 className='text-xl font-bold mt-2'>{value.title}</h1>
+                <p className=''>{value.description}</p>
+                  <div className="flex justify-end gap-2 mt-4">
+                <Link to={`create/${value.id}/`}><button className='bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg' >Edit</button></Link>
+                <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg" onClick={()=>{handleDelete(value.id)}}  >Delete</button>
             
+            </div>
             </div>
         )
     })}

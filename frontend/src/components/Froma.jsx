@@ -69,15 +69,19 @@ const Form=()=>{
   
 
     return(
-      <div>
-      <h3 className=" text-center"> this is my form </h3>
-      <form onSubmit={handleSubmit} >
-        <div className=" bg-amber-200  ">
+      <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6 mt-10">
+      <h3 className=" text-xl font-semibold text-center mb-4"> this is my form </h3>
+      <form onSubmit={handleSubmit} className="space-y-4" >
+        <div className="form-container ">
           
-          title : <input className="font-bold m-2 border-2 " type="text" name="title" value={formData.title } id="formData.title" onChange={handleChange}/>
-          description : <input className="font-bold m-2 border-2 " type="text" name="description" value={formData.description} onChange={handleChange}/><br></br>
-          image : <input className="font-bold m-2 border-2 " type="file" name="image"   onChange={handleimage}/>
-          <button className="bg-blue-500 text-white p-2 rounded-lg m-2 " type='submit'>submit</button>
+          title : <input  className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm
+             focus:border-blue-500 focus:ring-blue-200 focus:ring-1 outline-none" type="text" name="title" value={formData.title } id="formData.title" onChange={handleChange}/>
+          description : <input  className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm
+             focus:border-blue-500 focus:ring-blue-200 focus:ring-1 outline-none" type="text" name="description" value={formData.description} onChange={handleChange}/><br></br>
+          image : <input className="block file:mr-4 file:px-4 file:py-2 file:border file:border-gray-300
+             file:rounded-md file:text-sm file:bg-white file:text-gray-700
+             hover:file:bg-gray-100" type="file" name="image"   onChange={handleimage}/>
+          <button className="w-full bg-blue-500 text-white py-2 rounded-md mt-5 hover:bg-blue-600 focus:ring-2 focus:ring-blue-300" type='submit'>submit</button>
           
         </div>
         </form>
