@@ -16,6 +16,7 @@ from rest_framework import status
 
 
 class api_view(APIView):
+    
     def get(self, request, pk= None):
         # if pk is not None:
         #     post = Post.objects.get(pk=pk)
@@ -29,7 +30,6 @@ class api_view(APIView):
             else:
               serializers = PostSerializer(post)
               return Response(serializers.data, status=status.HTTP_200_OK)
-        
         
         post=Post.objects.all()
         serializers = PostSerializer(post, many=True)
